@@ -70,11 +70,11 @@ class DatabaseConnector:
 
         try:
             if self.db_type in ["Hive", "Impala"]:
-                self.conn = jaydebeapi.connect(self.secrets['cls'], self.secrets['host'],
+                self.conn = jaydebeapi.connect(self.secrets['class'], self.secrets['host'],
                                                [self.secrets['user'], self.secrets['pass']], self.secrets['jar'])
             elif self.db_type == "Oracle":
                 self.conn = cx_Oracle.connect(user=self.secrets['user'], password=self.secrets['pass'],
-                                              dsn=self.secrets['host'])
+                                              dsn=self.secrets['dsn'])
             elif self.db_type == "PostgreSQL":
                 self.conn = psycopg2.connect(host=self.secrets['host'], user=self.secrets['user'],
                                              password=self.secrets['pass'], database=self.secrets['database'])

@@ -1,0 +1,5 @@
+Tables,Select Query,Error Description
+yuktivara.citizens,SELECT * FROM yuktivara.citizens;,Working
+yuktivara.public_transport_usage,SELECT * FROM yuktivara.public_transport_usage;,Working
+yuktivara.traffic_violations,SELECT * FROM yuktivara.traffic_violations;,Working
+yuktivara.violation_rules,SELECT * FROM yuktivara.violation_rules;,Working
