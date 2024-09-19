@@ -1,0 +1,41 @@
+{
+    "Instructions": {
+      "1. Database Selection": {
+        "Description": "Select the appropriate database system for your query execution. Each database is assigned a unique identifier for selection.",
+        "Options": {
+          "1": "Apache Hive",
+          "2": "Apache Impala",
+          "3": "Oracle Database",
+          "4": "PostgreSQL",
+          "5": "Snowflake",
+          "6": "MySQL"
+        },
+        "Note": "Ensure you have the necessary permissions and connection details for your chosen database."
+      },
+      "2. Output File Format Selection": {
+        "Description": "Choose the desired format for the query results output file.",
+        "Options": {
+          "1": "Excel Format (.xlsx)",
+          "2": "CSV Format (.csv)"
+        },
+        "Note": "Consider your data analysis needs and software compatibility when selecting the output format."
+      },
+      "3. Query Execution and Output": {
+        "FileName": ["Query", ["col1", "col2"]],
+        "ErrorHandling": [
+          "In case of query failure due to un identified scenario of query:",
+          "1. Manually add the column names to the list like ['Query', ['col1', 'col2']]",
+          "2. Report this error on the project's GitHub repository for further investigation and resolution."
+        ],
+        "Note": "Regular reviewing and updating of the 'extract_columns' function can help prevent such errors."
+      }
+    },
+    "Configuration": {
+      "database": "6",
+      "fileformat": "2",
+      "queries": {
+        "Actors-Details": ["SELECT DISTINCT * FROM yuktivara.citizens"],
+        "Actor-manual": ["SELECT DISTINCT CONCAT(name, ' is a ', gender) FROM yuktivara.citizens"]
+      }
+    }
+  }

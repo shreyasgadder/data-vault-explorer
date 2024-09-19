@@ -1,0 +1,6 @@
+pandas
+jaydebeapi
+cx_Oracle
+snowflake-connector-python
+psycopg2
+PyMySQL

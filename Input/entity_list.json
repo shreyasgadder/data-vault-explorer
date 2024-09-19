@@ -1,0 +1,55 @@
+{
+        "Instructions": {
+          "1. Database Selection": {
+            "Description": "Select the database system you intend to use. Each option is assigned a unique identifier.",
+            "Options": {
+              "1": "Apache Hive",
+              "2": "Apache Impala",
+              "3": "Oracle Database",
+              "4": "PostgreSQL",
+              "5": "Snowflake",
+              "6": "MySQL"
+            },
+            "Note": "Ensure you have the necessary permissions and connection details for your chosen database."
+          },
+          "2. Data Structure Specification": {
+            "Description": "Specify whether your input data is organized into schemas or tables.",
+            "Options": {
+              "1": "Schemas",
+              "2": "Tables"
+            },
+            "Note": "This choice affects how the system will interpret and process your data structure."
+          },
+          "3. Batch Size Configuration": {
+            "Description": "Specify the number of tables to be executed before the connection is refreshed.",
+            "Format": "Integer or null",
+            "Note": "If set to null, all tables will be executed in one go without refreshing the connection."
+          },
+          "4. Schema Name Inclusion": {
+            "Description": "If you selected 'Tables' in step 2, indicate whether you want to include the schema name in your queries.",
+            "Options": "true/false",
+            "Note": "Including the schema name only if all the tables are in same schema"
+          },
+          "5. Schema Name Specification": {
+            "Description": "If you chose to include the schema name in step 4, provide the name of the schema here.",
+            "Format": "Text string (e.g., 'public', 'dbo', 'test_schema')",
+            "Note": "Ensure the schema name is spelled correctly and matches the case sensitivity of your database system."
+          },
+          "6. Entities Specification": {
+            "Description": "List the entities (schema names or table names) you want to work with. If ",
+            "Format": "Array of strings",
+            "Note": ["Entities should be schema names if you selected 'Schemas' in step 2, or table names if you selected 'Tables'.",
+                     "Schema.Table if you selected Schema inclusion in step 4 as false"]
+          }
+        },
+        "Configuration": {
+          "database": "6",
+          "test_type": "1",
+          "batch_size": 2,
+          "include_schema": true,
+          "schema": "yuktivara",
+          "entities": [
+            "yuktivara"
+          ]
+        }
+}
